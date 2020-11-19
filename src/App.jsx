@@ -1,5 +1,12 @@
-function App() {
-  return <div className='App'>Hello World</div>;
-}
+import Map from './components/Map';
+import { MapContextProvider } from './contexts/MapContext';
 
-export default App;
+export default function App() {
+  return (
+    <div className='App'>
+      <MapContextProvider>
+        <Map />
+      </MapContextProvider>
+    </div>
+  );
+}
